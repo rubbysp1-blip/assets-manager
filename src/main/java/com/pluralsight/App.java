@@ -5,30 +5,6 @@ import java.util.ArrayList;
 
 public class App {
     public static void main(String[] args) {
-        House house = new House();
-        house.setCondition(2);
-        house.setSquareFoot(1800);
-        house.setLotSize(6000);
-        System.out.printf("%,.2f\n", house.getValue());
-
-        House house2 = new House("house", "2026", new BigDecimal("20000"), "1234 street", 2, 1800,6000);
-
-        System.out.println(house2.getValue());
-
-        Vehicle vehicle = new Vehicle();
-        vehicle.setOriginalCost(BigDecimal.valueOf(20000));
-        vehicle.setYear(2018);
-        vehicle.setMakeModel("Toyota");
-        System.out.printf("%,.2f\n", vehicle.getValue());
-
-        Vehicle vehicle2 = new Vehicle();
-        vehicle2.setOriginalCost(BigDecimal.valueOf(20000));
-        vehicle2.setYear(1990);
-        vehicle2.setMakeModel("chevy");
-        System.out.printf("%,.2f\n", vehicle2.getValue());
-
-        Vehicle vehicle3 = new Vehicle("car", "2024", new BigDecimal("20000"), "Honda", 2020, 200000);
-        System.out.println(vehicle3.getValue());
 
         ArrayList<Asset> assets = new ArrayList<>();
         assets.add(new House("my house", "2026", new BigDecimal("20000"), "1234 street", 2, 1800, 5000));
