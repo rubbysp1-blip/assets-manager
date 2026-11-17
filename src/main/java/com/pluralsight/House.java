@@ -30,6 +30,10 @@ public class House extends Asset{
         super();
     }
 
+    public House(String description, String dateAcquired, BigDecimal originalCost) {
+        super(description, dateAcquired, originalCost);
+    }
+
     public String getAddress() {
         return address;
     }

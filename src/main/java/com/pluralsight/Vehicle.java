@@ -33,6 +33,9 @@ public class Vehicle extends Asset{
         else{
             value = BigDecimal.valueOf(1000);
         }
+        if(this.odometer > 100000){
+            value = value.multiply(BigDecimal.valueOf(1 - 0.25));
+        }
          return value;
     }
 
