@@ -41,6 +41,16 @@ public class App {
             System.out.println("Date Acquired: " + asset.getDateAcquired());
             System.out.println("Paid: " + asset.getOriginalCost());
             System.out.println("Value: " + asset.getValue());
+
+            if(asset instanceof House house1){
+                System.out.println("House Address: " + house1.getAddress());
+            }
+            if(asset instanceof Vehicle vehicle1){
+                System.out.println("Year of Vehicle: " + vehicle1.getYear());
+                System.out.println("Make/Model of Vehicle: " + vehicle1.getMakeModel());
+            }
         }
+
+
     }
 }
