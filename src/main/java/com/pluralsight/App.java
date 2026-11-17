@@ -10,6 +10,7 @@ public class App {
         house.setLotSize(6000);
         System.out.printf("%,.2f\n", house.getValue());
 
+
         Vehicle vehicle = new Vehicle();
         vehicle.setOriginalCost(BigDecimal.valueOf(20000));
         vehicle.setYear(2024);

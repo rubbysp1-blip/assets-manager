@@ -12,8 +12,11 @@ public class Vehicle extends Asset{
         super();
     }
 
-    public Vehicle(String description, String dateAcquired, BigDecimal originalCost) {
+    public Vehicle(String description, String dateAcquired, BigDecimal originalCost, String makeModel, int year, int odometer) {
         super(description, dateAcquired, originalCost);
+        this.makeModel = makeModel;
+        this.year = year;
+        this.odometer = odometer;
     }
 
     @Override
