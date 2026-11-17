@@ -23,6 +23,7 @@ public class Vehicle extends Asset{
     public BigDecimal getValue(){
         LocalDateTime localDateTime = LocalDateTime.now();
         int yearsOld = localDateTime.getYear() - this.year;
+        boolean hondaOrToyota = makeModel.equalsIgnoreCase("honda") || makeModel.equalsIgnoreCase("toyota");
         BigDecimal value;
         if(yearsOld <= 3){
             value = getOriginalCost().multiply(BigDecimal.valueOf(1 - (yearsOld * .03)));
@@ -31,12 +32,12 @@ public class Vehicle extends Asset{
             value = getOriginalCost().multiply(BigDecimal.valueOf(1 - (yearsOld * .06)));
         }
         else if(yearsOld <= 10){
-            value = getOriginalCost().multiply(BigDecimal.valueOf(1 - (yearsOld * .09)));
+            value = getOriginalCost().multiply(BigDecimal.valueOf(1 - (yearsOld * .08)));
         }
         else{
             value = BigDecimal.valueOf(1000);
         }
-        if(this.odometer > 100000){
+        if(this.odometer > 100000 || !hondaOrToyota){
             value = value.multiply(BigDecimal.valueOf(1 - 0.25));
         }
          return value;
