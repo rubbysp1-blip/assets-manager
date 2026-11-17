@@ -9,7 +9,7 @@ public class Asset {
 
     public BigDecimal getValue(){
 
-        return null;
+        return originalCost;
     }
 
     public Asset() {
