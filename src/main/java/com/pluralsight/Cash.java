@@ -9,6 +9,11 @@ public class Cash extends Asset{
         this.cash = cash;
     }
 
+    public Cash(String description, String dateAcquired, BigDecimal originalCost, BigDecimal cash) {
+        super(description, dateAcquired, originalCost);
+        this.cash = cash;
+    }
+
     @Override
     public BigDecimal getValue(){
         return cash;
