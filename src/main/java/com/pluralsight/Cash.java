@@ -5,10 +5,6 @@ import java.math.BigDecimal;
 public class Cash extends Asset{
     private BigDecimal cash;
 
-    public Cash(BigDecimal cash) {
-        this.cash = cash;
-    }
-
     public Cash(String description, String dateAcquired, BigDecimal originalCost, BigDecimal cash) {
         super(description, dateAcquired, originalCost);
         this.cash = cash;
@@ -16,6 +12,6 @@ public class Cash extends Asset{
 
     @Override
     public BigDecimal getValue(){
-        return cash;
+        return getOriginalCost();
     }
 }

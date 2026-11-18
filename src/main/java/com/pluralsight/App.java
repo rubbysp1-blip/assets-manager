@@ -12,16 +12,14 @@ public class App {
         assets.add(new House("sister's house", "2026", new BigDecimal("30000"), "1235 street", 2, 2500, 8000));
         assets.add(new Vehicle("my car", "2024", new BigDecimal("35000"), "Honda", 2020, 200000));
         assets.add(new Vehicle("sister's car", "2026", new BigDecimal("60000"), "Mercedes", 2026, 80000));
-        assets.add(new Cash("Work","2026-11-16", new BigDecimal("0"), new BigDecimal("200000")));
-        assets.add(new Cash(new BigDecimal("200000")));
+        assets.add(new Cash("Work","2026-11-16", new BigDecimal("2000"), new BigDecimal("200000")));
 
         for (Asset asset : assets){
 
             System.out.println("\nDescription: " + asset.getDescription());
             System.out.println("Date Acquired: " + asset.getDateAcquired());
-            if(asset.getOriginalCost() != null){
-                System.out.println("Paid: " + asset.getOriginalCost());
-            }
+            System.out.println("Paid: " + asset.getOriginalCost());
+
 
             System.out.println("Value: " + asset.getValue());
 

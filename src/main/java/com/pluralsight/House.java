@@ -15,13 +15,13 @@ public class House extends Asset{
         if(condition == 1){
             price = BigDecimal.valueOf(((180 * squareFoot)));
         }
-        if(condition == 2){
+        else if(condition == 2){
             price = BigDecimal.valueOf(130 * squareFoot);
         }
-        if(condition == 3){
+        else if(condition == 3){
             price = BigDecimal.valueOf(90 * squareFoot);
         }
-        if(condition == 4){
+        else if(condition == 4){
             price = BigDecimal.valueOf(80 * squareFoot);
         }
         price = price.add(BigDecimal.valueOf(lotValue));

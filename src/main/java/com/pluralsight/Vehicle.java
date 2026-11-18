@@ -26,13 +26,13 @@ public class Vehicle extends Asset{
         boolean hondaOrToyota = makeModel.toLowerCase().contains("honda") || makeModel.toLowerCase().contains("toyota");
         BigDecimal value;
         if(yearsOld <= 3){
-            value = getOriginalCost().multiply(BigDecimal.valueOf(1 - (yearsOld * .03)));
+            value = getOriginalCost().multiply(BigDecimal.ONE.subtract(BigDecimal.valueOf(yearsOld).multiply(new BigDecimal("0.03"))));
         }
         else if(yearsOld <= 6){
-            value = getOriginalCost().multiply(BigDecimal.valueOf(1 - (yearsOld * .06)));
+            value = getOriginalCost().multiply(BigDecimal.ONE.subtract(BigDecimal.valueOf(yearsOld).multiply(new BigDecimal("0.06"))));
         }
         else if(yearsOld <= 10){
-            value = getOriginalCost().multiply(BigDecimal.valueOf(1 - (yearsOld * .08)));
+            value = getOriginalCost().multiply(BigDecimal.ONE.subtract(BigDecimal.valueOf(yearsOld).multiply(new BigDecimal("0.08"))));
         }
         else{
             value = BigDecimal.valueOf(1000);
