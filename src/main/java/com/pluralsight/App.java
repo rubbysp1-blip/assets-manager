@@ -33,6 +33,9 @@ public class App {
             }
         }
 
-
+        // You can explain why your Abstract Assets work wasn't in main until now, and what the
+        // merge did
+        //The abstract work was not in the main at first because it was done in a separate branch.
+        //So, once the merge was done it inserted the changes that were made to the code.
     }
 }
