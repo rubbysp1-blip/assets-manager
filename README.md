@@ -5,4 +5,5 @@ I get an error of it can not extend because the class is abstract. To address th
 issue is to import and override the getValue method from the parent class to the child class.
 If I were not to put the gtValue() method I could make the child class abstract.
 
+Removed the field cash and decided to put the variable in the constructor
 ![The home screen](images/screen.png)
